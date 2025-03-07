@@ -1,10 +1,5 @@
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import React from 'react';
-import {
-  teamsDarkTheme,
-  teamsHighContrastTheme,
-  teamsLightTheme,
-} from "@fluentui/react-components";
 import { useTeams } from "@microsoft/teamsfx-react";
 import darkTheme from '../../themes/darkTheme';
 

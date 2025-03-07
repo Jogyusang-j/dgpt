@@ -1,7 +1,6 @@
 import {
   Box,
   Flex,
-  Icon,
   Image,
   Modal,
   ModalBody,
@@ -108,6 +107,7 @@ const ImageSliderModal = ({
     if (sliderRef?.current) {
       sliderRef.current.slickGoTo(selectedIndex); // Go to the selected index slide
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sliderRef.current]);
 
   const goToSlide = (index: any) => {

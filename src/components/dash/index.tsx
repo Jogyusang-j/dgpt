@@ -8,6 +8,7 @@ import { useState } from "react";
 
 export const Dash = (chat: IChat) => {
   console.log("chat", JSON.stringify(chat));
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [input, setInput] = useState("");
 
   const loading = false;

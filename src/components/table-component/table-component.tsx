@@ -6,8 +6,6 @@ import {
   StyledChatTableContainer,
   StyledPaginationContainer,
 } from "./styled";
-import { ColumnFlex } from "../common/style";
-import { CustomText } from "../components";
 import { CustomTextComponent } from "../custom-vetical-view";
 import { TABLE_ITEM_LAYOUT_TYPE } from "../../constants";
 

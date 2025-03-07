@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Modal,
   ModalBody,
@@ -7,7 +8,6 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Text,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 // import useCustomTheme from "@root/hooks/useCustomTheme";

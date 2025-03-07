@@ -15,32 +15,6 @@ export const SuggestedQuestions = ({
   const [loader, setLoader] = useState(false);
   const [suggestedQuestions, setSuggestedQuestions] = useState<any>([]);
 
-  const handleClick = () => {
-    if (userInput) {
-      setLoading(true);
-
-      const payload: any = { query: userInput };
-
-      axios
-        .post(`${process.env.REACT_APP_BASE_URL}/user/query`, payload, {
-          headers: {
-            "x-api-key": userId,
-          },
-        })
-        .then((response) => {
-          navigate(`/messages/${response?.data?.data?.threadId}`);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        })
-        .finally(() => setLoading(false));
-    }
-  };
-
-  useEffect(() => {
-    if (userId) getSuggestedQuestions();
-  }, [userId]);
-
   const getSuggestedQuestions = () => {
     setLoader(true);
     axios
@@ -59,6 +33,10 @@ export const SuggestedQuestions = ({
       .finally(() => setLoader(false));
   };
 
+  useEffect(() => {
+    if (userId) getSuggestedQuestions();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId]);
   return (
     <div
       style={{

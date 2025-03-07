@@ -15,7 +15,6 @@ import ThreadList from "../threadList";
 import Breakpoints from "../mediaQuery";
 import { PlusSign } from "../../assets/icons";
 import Emitter from "../../services/emitter";
-import useThreads from "../../hooks/useThreads";
 import { useThreadContext } from "../../context/thread-context";
 
 export const Sidebar = ({
@@ -51,18 +50,12 @@ export const Sidebar = ({
     setCurrentPinnedPage,
     setCurrentUnpinnedPage,
     setThreadLoader,
-    setNewChatThread,
-    newChatThread,
-    beforeThreads,
-    afterThreads,
-    errorThreads,
-    envVar,
-    threadError,
   } = useThreadContext();
 
   useEffect(() => {
-    if (!selectedThread && pathname != "/tab" && !sm)
+    if (!selectedThread && pathname !== "/tab" && !sm)
       setSelectedThread(unPinnedThreads?.[0]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [unPinnedThreads]);
 
   const [loader, setToggleLoader] = useState<any>(null);
@@ -159,6 +152,7 @@ export const Sidebar = ({
     return () => {
       debouncedLoadThreads.cancel();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery, userId]);
 
   const loadPinnedThreads = (userId: any, isPinned: boolean) => {

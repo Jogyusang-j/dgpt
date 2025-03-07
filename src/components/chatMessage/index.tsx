@@ -12,7 +12,6 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import {
-  ANY,
   BOT,
   DISLIKED,
   LIKED,

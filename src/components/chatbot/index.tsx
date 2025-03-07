@@ -295,6 +295,7 @@ export const Chatbot = () => {
       setThreadId("");
       setMessages([]);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params, userId]);
 
   const ImageZoomFeature = ({ src = "" }: any) => {

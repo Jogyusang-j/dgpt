@@ -5,6 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import * as microsoftTeams from "@microsoft/teams-js";
 import { TimeIcon } from "@chakra-ui/icons";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import _ from "lodash";
 import { convertTime } from "../../utils.js";
 import { useNavigate } from "react-router-dom";
@@ -32,6 +33,7 @@ export const ChatHistory = () => {
         console.log("App is not running inside Microsoft Teams");
       }
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadThreads = (userId: any) => {

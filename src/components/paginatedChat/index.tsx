@@ -10,6 +10,7 @@ export const ScrollPagination = ({
   submitHandler,
 }: IScrollPagination) => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollheight, setScrollheight] = useState("auto");
   const scrollableDivRef = useRef<HTMLDivElement | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -36,6 +37,7 @@ export const ScrollPagination = ({
       scrollableDivRef.current.scrollTop =
         scrollableDivRef.current.scrollHeight;
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submitHandler]);
 
   const onScrollHandler = () => {

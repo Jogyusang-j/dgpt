@@ -2,10 +2,13 @@
   "name": "dgptbot",
   "version": "3.0.3",
   "engines": {
-    "node": "16 || 18"
+    "node": "16 || 18 || 20"
   },
   "private": true,
   "dependencies": {
+    "@actions/core": "1.6.0",
+    "@actions/http-client": "^2.2.3",
+    "@azure/msal-node": "^3.2.3",
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.13.0",

@@ -1,24 +1,20 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useRef, useEffect } from "react";
 import {
   Box,
-  Input,
   Spinner,
   Card,
-  InputGroup,
-  InputRightElement,
 } from "@chakra-ui/react";
 import axios from "axios";
 import "../../styles/Chatbot.css";
 import * as microsoftTeams from "@microsoft/teams-js";
 import { useNavigate, useParams } from "react-router-dom";
 import { cloneDeep } from "lodash";
-import { ArrowUpIcon } from "@chakra-ui/icons";
 import { useTranslation } from "react-i18next";
 import { SuggestedQuestions } from "../suggested-questions";
 import { ChatsIntro } from "../chats-intro";
 import Breakpoints from "../mediaQuery";
 import ChatInput from "../chatInput";
-import { ChevronUpIcon } from "../../assets/icons";
 import { SendButton } from "../../assets/images/sendButton";
 
 export const EmptyChatbot = () => {
@@ -30,8 +26,10 @@ export const EmptyChatbot = () => {
   const [userInput, setUserInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [userId, setUserId] = useState<string | undefined>("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [chatLoader, setChatLoader] = useState(false);
   const inputRef = useRef<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [threadId, setThreadId] = useState<string | undefined>(undefined);
 
   type MessageType = {

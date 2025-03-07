@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useRef, useEffect } from "react";
 import {
   Box,
@@ -13,9 +14,6 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-  Alert,
-  AlertIcon,
-  CloseButton,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { ScrollPagination } from "../paginatedChat";
@@ -28,7 +26,6 @@ import { LoaderAnimatedCircleIcon, SendButton } from "../../assets";
 import {
   BOT,
   DISLIKED,
-  NEW_ANSWER,
   PLAIN_QUESTION,
   USER,
   additionalQuestionUrl,
@@ -38,14 +35,10 @@ import ChatMessage from "../chatMessage";
 import { useTranslation } from "react-i18next";
 import Breakpoints from "../mediaQuery";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import { ImageSliderPopup } from "../modals/ImageSliderPopup";
 import { ScaleableImage } from "../scaleableImage/scaleableImage";
-import { ArrowUpIcon, ZoomInIcon, ZoomOutIcon } from "../../assets/icons";
+import { ZoomInIcon, ZoomOutIcon } from "../../assets/icons";
 import { CustomPopup } from "../modals/CustomPopup";
 import ImageSliderModal from "../modals/ImageSlider";
-import Emitter from "../../services/emitter";
-import useThreads from "../../hooks/useThreads";
 import { useThreadContext } from "../../context/thread-context";
 
 export const Messages = ({
@@ -75,10 +68,6 @@ export const Messages = ({
   const [sliderImages, setSliderImages] = useState<any>([]);
   const [emptyFlag, setEmptyFlag] = useState<boolean>(false);
   const { getThreads, currentUnpinnedPage } = useThreadContext();
-  const prevParamsRef = useRef<any>(null);
-  const handleImageChange = (index: any) => {
-    setSelectedIndex(index); // updates selected index when the image changes
-  };
 
   const handleIndexChange = (
     messageId: any,
@@ -208,6 +197,7 @@ export const Messages = ({
           if (parentChatId) {
             getChatByThreadId(params.threadId);
             const selectedMessage: any = messages?.find(
+              // eslint-disable-next-line eqeqeq
               (item) => item?.id == parentChatId && item?.type === USER
             );
             handleIndexChange(
@@ -606,22 +596,6 @@ export const Messages = ({
   useEffect(() => {
     if (emptyFlag && userId) handleClick();
   }, [emptyFlag, userId]);
-
-  const ImageSliderFeature = ({ src = "" }: any) => {
-    return (
-      <Carousel
-        showArrows={true}
-        selectedItem={selectedIndex}
-        onChange={handleImageChange} // fires when the slide changes
-      >
-        {sliderImages.map((image: any) => (
-          <>
-            <img src={image?.path} style={{ width: "300px" }} />
-          </>
-        ))}
-      </Carousel>
-    );
-  };
 
   const ImageZoomFeature = ({ src = "" }: any) => {
     return (

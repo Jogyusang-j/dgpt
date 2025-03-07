@@ -1,5 +1,5 @@
 import { Box, Textarea } from "@chakra-ui/react";
-import { ChangeEvent, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { StyledTextareaContainer } from "./style";
 
 const CustomTextarea = (props: any) => {
@@ -21,20 +21,11 @@ const CustomTextarea = (props: any) => {
     }
   }, [textareaRef.current?.scrollHeight]);
 
-  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    if (textareaRef.current) {
-      textareaRef.current.style.height = "auto";
-      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
-    }
-    // onChange(e);
-  };
-
   return (
     <StyledTextareaContainer>
       <Textarea
         rows={1}
         ref={textareaRef}
-        // onChange={handleChange}
         value={value}
         placeholder={"chat.enterText"}
         borderRadius={borderRadius}

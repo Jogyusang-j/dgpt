@@ -3,8 +3,6 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  InputRightElement,
-  Spinner,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { Search } from "../../assets";
