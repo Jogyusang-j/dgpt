@@ -1,0 +1,34 @@
+{
+  "sidebar": {
+    "chatsHeader": "Q&A List",
+    "pinChats": "Pinned Chats",
+    "pinChat": "Pin Chat",
+    "unpinChats": "Unpin Chats",
+    "unpinChat": "Unpin Chat",
+    "newChat": "New Chat",
+    "noChatFound": "No Chats Found.",
+    "allChats": "All Chats",
+    "search": "Search",
+    "searchTerm": "Enter your search term",
+    "showLess": "Show Less",
+    "showMore": "Show More",
+    "source": "Source"
+  },
+  "chats": {
+    "help": "How can I help you?",
+    "introInitial": "Get started by writing a question and D-GPT can do the rest.",
+    "introEnding": "Not sure where to start? Check out the Prompt Library for inspiration.",
+    "ask": "Ask anything from D-GPT",
+    "analyzing": "Analyzing & Generating Answer...",
+    "Images": "images",
+    "title": "Title",
+    "caption": "Caption:",
+    "viewOriginal": "View original",
+    "moreAnswers": "More answers",
+    "furtherAnswers": "If this is not the information you are looking for, you can find the answer here:",
+    "like": "Like",
+    "dislike": "Dislike",
+    "additionalQuestion": "Additional question",
+    "noHistory": "No Previous Chat History."
+  }
+}

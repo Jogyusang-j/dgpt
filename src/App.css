@@ -1,0 +1,50 @@
+#fluent-provider {
+  background: var(--colorTransparentBackground);
+}
+
+#spinner {
+  margin: 100;
+}
+
+ul ul {
+  margin-left: 20px; /* Adjust as needed */
+}
+
+ul ul ul {
+  margin-left: 40px;
+}
+
+ul ul ul ul {
+  margin-left: 60px;
+}
+
+blockquote blockquote p {
+  margin-left: 20px;
+}
+
+table {
+  margin-top: 10px;
+}
+
+.bg-app {
+  background-image: url("../public/background-chatbox.svg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  background-color: #f0f5f8;
+}
+
+.thread-list-container > div {
+  width: 100%;
+}
+
+.thread-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 4px;
+}
+
+.thread-list::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(79, 78, 78, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}

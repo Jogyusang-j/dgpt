@@ -1,0 +1,35 @@
+{
+  "sidebar": {
+    "chatsHeader": "Q&A 목록",
+    "pinChats": "고정된 채팅",
+    "pinChat": "핀 채팅",
+    "unpinChats": "모든 채팅",
+    "unpinChat": "채팅 고정 해제",
+    "newChat": "새 채팅",
+    "noChatFound": "채팅을 찾을 수 없습니다.",
+    "allChats": "모든 채팅",
+    "search": "찾다",
+    "searchTerm": "검색어를 입력하세요",
+    "showLess": "간략히 표시",
+    "showMore": "더보기",
+    "source": "출처"
+  },
+  "chats": {
+    "help": "무엇이든 질문하세요",
+    "introInitial": "질문을 작성하여 시작하시면 나머지는 D-GPT에서 처리해 드립니다.",
+    "introEnding": "어디서부터 시작해야 할지 모르시나요? 영감을 얻으려면 프롬프트 라이브러리를 확인하세요.",
+    "ask": "D-GPT에 무엇이든 물어보세요",
+    "analyzing": "답변 분석 및 생성 중...",
+    "title": "표제",
+    "images": "이미지",
+    "caption": "표제:",
+    "viewOriginal": "원본 보기",
+    "moreAnswers": "더 많은 답변",
+    "furtherAnswers": "이것이 원하는 정보가 아닌 경우, 여기에서 답변을 찾을 수 있는 경우입니다:",
+    "like": "좋아요",
+    "dislike": "싫어요",
+    "additionalQuestion": "추가 질문",
+    "noHistory": "이전 채팅 기록이 없습니다.",
+    "image_title": "원본보기"
+  }
+}
