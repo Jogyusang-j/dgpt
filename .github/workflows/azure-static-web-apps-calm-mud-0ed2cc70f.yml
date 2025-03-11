@@ -23,6 +23,12 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
       - name: Install OIDC Client from Core Package
         run:  yarn add @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token
