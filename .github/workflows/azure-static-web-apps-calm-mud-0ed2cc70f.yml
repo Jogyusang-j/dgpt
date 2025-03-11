@@ -27,7 +27,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
 
       - name: Install OIDC Client from Core Package
         run: yarn add @actions/core@1.6.0 @actions/http-client
